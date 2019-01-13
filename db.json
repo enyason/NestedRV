@@ -554,6 +554,60 @@
 "backdrop": "p5zjZUDBlUWT9tdvea9A.jpg",
 "age": "PG-13",
 "player": "link"
+},
+
+{
+"type": "movie",
+"id": "5fa861f0-bb77-11e8-aedc-8f1d1fb0fc6e",
+"name": "Ajeyo",
+"poster": "TUFeJpUoiHsBIt8qvWDV.jpg",
+"overview": "Ajeyo is a 2014 Assamese language drama film directed by Jahnu Barua; based on the Sahitya Akademi Award winner 1997 Assamese novel Ashirbador Rong written by Arun Sharma and adapted as screenplay by the director himself.",
+"year": 2014,
+"genre": "Drama",
+"rate": 5,
+"backdrop": "adPlPlS0O68bb4T5wEb3.jpg",
+"age": "PG",
+"player": "link"
+},
+{
+"type": "movie",
+"id": "25534f90-bac3-11e8-9e22-b584dc5b76d2",
+"name": "The Nun",
+"poster": "IJKSEGkbJIkBJTU3WDVM.jpg",
+"overview": "",
+"year": 2018,
+"genre": "Crime",
+"rate": 6,
+"backdrop": "TZDOPScaXEcUjsuwybvq.jpg",
+"age": "PG-13",
+"player": "link"
+},
+{
+"type": "movie",
+"id": "210b0440-bac7-11e8-b63d-479cc76c7ce7",
+"name": "Justice League",
+"poster": "CKQX6id9Pe1oEU0qxu6e.jpg",
+"overview": "",
+"year": 2017,
+"genre": "Fantasy",
+"rate": 6.3,
+"backdrop": "WRjhqGbhpWHwf1B6qgWN.jpg",
+"age": "PG",
+"player": "link"
+},
+{
+"type": "movie",
+"id": "0b892880-b02e-11e8-86f8-6d64899843e4",
+"name": "Black Panther",
+"poster": "j1XKqK9r7oR8KQzqfw0g.jpg",
+"overview": "",
+"year": 2018,
+"genre": "Action,Superhero",
+"rate": 7.4,
+"backdrop": "7vcmZpzwqhiVJlu0Y4G3.jpg",
+"age": "PG-13",
+"player": "link"
 }
 ]
+}
 }
