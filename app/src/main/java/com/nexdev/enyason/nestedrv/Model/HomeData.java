@@ -10,23 +10,13 @@ public class HomeData {
 
 
     List<Data> data;
-    List<Movie> top;
 
-
-    public HomeData(List<Data> data, List<Movie> top) {
+    public HomeData(List<Data> data) {
         this.data = data;
-        this.top = top;
     }
 
 
     public List<Data> getData() {
         return data;
     }
-
-    public List<Movie> getTop() {
-        return top;
-    }
-
-
-
 }

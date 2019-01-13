@@ -25,7 +25,7 @@
                 android:layout_width="130dp"
                 android:layout_height="170dp"
                 android:scaleType="fitXY"
-                android:transitionName="posterImage" />
+                />
 
 
             <LinearLayout
@@ -43,7 +43,6 @@
 
                     android:maxLines="1"
                     android:text="Mission Impossible"
-                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <TextView
@@ -54,7 +53,6 @@
                     android:fontFamily="sans-serif"
                     android:maxLines="1"
                     android:text="Action,Comedy..."
-                    android:textColor="#fff"
                     android:textSize="12sp" />
 
 

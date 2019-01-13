@@ -55,20 +55,22 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setAdapter(adapter);
+
 
 
         Call<HomeBodyResponse> responseCall = RetrofitSingleton.getInstance().getApi().getMovieByCategory();
 
         responseCall.enqueue(new Callback<HomeBodyResponse>() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onResponse(Call<HomeBodyResponse> call, Response<HomeBodyResponse> response) {
                 progressBar.setVisibility(View.GONE);
 
+                for (Data data : response.body().getData().getData()) {
 
-                response.body().getData().getTop().forEach(c -> Log.d(TAG, "onResponse: " + c.getName()));
+                    dataList.add(data);
+                }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -76,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
 
                 progressBar.setVisibility(View.GONE);
 
-                Log.d(TAG, "onFailure: " + t.getMessage());
             }
         });
     }

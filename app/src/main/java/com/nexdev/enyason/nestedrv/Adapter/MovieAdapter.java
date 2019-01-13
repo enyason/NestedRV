@@ -24,18 +24,12 @@ import java.util.List;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
 
-    private static final String IMAGE_BASE_URL = "http://r2h-live.in/storage/posters/300_";
-    private final AppCompatActivity activity;
     private List<Movie> movieList;
     private Context context;
 
     public MovieAdapter(List<Movie> list, Context context) {
         this.movieList = list;
         this.context = context;
-        Log.i("BUG ", "adapter constructor");
-        Log.i("BUG ", movieList.size() + "");
-
-        activity = (AppCompatActivity) context;
 
 
     }
@@ -58,9 +52,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         holder.textViewGenre.setText(movie.getGenre());
 
         Picasso.with(context).
-                load(IMAGE_BASE_URL + movie.getPoster())
+                load(context.getResources().getString(R.string.image_url) + movie.getPoster())
                 .into(holder.imageViewMovie);
-
 
 
     }
@@ -78,7 +71,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         private TextView textViewTitle;
         private TextView textViewGenre;
         private ImageView imageViewMovie;
-        private View view;
 
 
         public MovieViewHolder(View itemView) {
@@ -87,7 +79,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             textViewGenre = itemView.findViewById(R.id.tv_genre);
             imageViewMovie = itemView.findViewById(R.id.image_view_movie);
 
-            view = itemView;
         }
 
 

@@ -19,7 +19,6 @@ public class Data {
         this.type = type;
     }
 
-
     public List<Movie> getList() {
         return list;
     }

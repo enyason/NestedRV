@@ -3,6 +3,8 @@ package com.nexdev.enyason.nestedrv.Api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -28,7 +30,7 @@ public class RetrofitSingleton {
                 .setLenient()
                 .create();
 
-        okHttpClient = new OkHttpClient.Builder();
+        okHttpClient = new OkHttpClient.Builder().readTimeout(3, TimeUnit.MINUTES);
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
@@ -54,7 +56,6 @@ public class RetrofitSingleton {
         return retrofit.create(RetrofitApiClient.class);
 
     }
-
 
 
 }
